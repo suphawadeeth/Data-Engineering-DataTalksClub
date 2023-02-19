@@ -5,6 +5,9 @@
 **/.DS_Store
 ._.DS_Store
 **/._.DS_Store
-__pycash__
+__pycash__/
 Data/
 week-3/data/
+week-2/data/
+week-2/ny_taxi_postgres_data/
+week-2/pgadmin/

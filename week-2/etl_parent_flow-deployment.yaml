@@ -1,0 +1,67 @@
+###
+### A complete description of a Prefect Deployment for flow 'etl-parent-flow'
+###
+name: Parameterized ETL
+description: ZoomCamp Deployment
+version: b01e7f55b64f6e4b7b471bb63444eea1
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+tags: []
+parameters:
+  months:
+  - 1
+  - 2
+  - 3
+  color: yellow
+schedule:
+  cron: 0 0 * * *
+  timezone: null
+  day_or: true
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: etl-parent-flow
+manifest_path: null
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  _block_document_id: 9da87159-9f62-4622-93ee-c59f0838ab42
+  _block_document_name: anonymous-f7ae6dd9-3783-4d23-9392-03292b92728d
+  _is_anonymous: true
+  block_type_slug: process
+  _block_type_slug: process
+storage: null
+path: /Users/kt/Desktop/DEzoom/week_2
+entrypoint: parameterized_flow.py:etl_parent_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    months:
+      title: months
+      default:
+      - 1
+      - 2
+      position: 0
+      type: array
+      items:
+        type: integer
+    year:
+      title: year
+      default: 2021
+      position: 1
+      type: integer
+    color:
+      title: color
+      default: yellow
+      position: 2
+      type: string
+  required: null
+  definitions: null

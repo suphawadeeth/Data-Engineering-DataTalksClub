@@ -1,0 +1,14 @@
+etl-parent-flow/Parameterized ETL
+
+prefect deployment build etl_web_to_gcs_q4:etl_web_to_gcs \
+    -n web-to-gcs \
+    -q homework4 \
+    -sb github/dezoom-prefect \
+    -o store-to-github \
+    --apply
+
+prefect agent start -q 'homework-q4'
+
+prefect deployment run etl-web-to-gcs/github-example
+
+prefect deployment run etl-web-to-gcs/github-homework
